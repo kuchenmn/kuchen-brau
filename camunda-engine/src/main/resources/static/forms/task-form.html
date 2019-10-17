@@ -1,0 +1,45 @@
+<strong>Here you would put the actual form to work on the task</strong>
+
+<p>
+  You can use this form through Camunda Tasklist
+  by setting the formKey of a BPMN User Task to:
+  <code>embedded:app:forms/task-form.html</code>
+</p>
+
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label">What Beer Would You Like To Brew?</label>
+    <div class="controls">
+      <select cam-variable-name="recipeName"
+              cam-variable-type="String">
+        <option>Kuchen Lager</option>
+        <option>Kuchen Ale</option>
+        <option>Kuchen Weisse</option>
+        <option>Kuchen Pils</option>
+        <option>Kuchen IPA</option>
+      </select>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">All Grain?</label>
+    <div class="controls">
+      <input type="checkbox"
+             cam-variable-name="allGrain"
+             cam-variable-type="Boolean"
+             name="allGrain"
+             class="form-control" />
+    </div>
+    <label class="control-label">Is This A Lager?</label>
+    <div class="controls">
+      <input type="checkbox"
+             cam-variable-name="lager"
+             cam-variable-type="Boolean"
+             name="lager"
+             class="form-control" />
+    </div>
+  </div>
+
+  <script cam-script type="text/form-script">
+  // custom JavaScript goes here
+  </script>
+</form>
