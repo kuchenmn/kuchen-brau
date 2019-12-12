@@ -1,0 +1,23 @@
+<h3>Update Task</h3>
+<div style="width: 400px;">
+<!--  <div [hidden]="submitted" style="width: 400px;"> TODO: hide this if not claimed-->
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="recipeName">Recipe Name</label>
+      <input type="text" class="form-control" id="recipeName" required [(ngModel)]="recipeName.value" name="recipeName">
+    </div>
+
+    <div class="form-group">
+      <label for="allGrain">All Grain?</label>
+      <input type="checkbox" class="form-control" id="allGrain" required [(ngModel)]="allGrain.value" name="allGrain">
+    </div>
+
+    <div class="form-group">
+      <label for="lager">Lager?</label>
+      <input type="checkbox" class="form-control" id="lager" required [(ngModel)]="lager.value" name="lager">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+  <button (click)="goToList()" class="btn btn-primary">Back to Task List</button><br>
+</div>

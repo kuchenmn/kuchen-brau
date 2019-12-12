@@ -13,6 +13,7 @@ public class YeastReadyMessageDelegate implements JavaDelegate {
         variables.put("yeastTempreature", delegateExecution.getVariable("yeastTemperature"));
         delegateExecution.getProcessEngineServices().getRuntimeService()
                 .createMessageCorrelation("yeastReadyMessage")
+                .processInstanceBusinessKey(delegateExecution.getProcessBusinessKey())
                 .setVariables(variables).correlate();
     }
 }

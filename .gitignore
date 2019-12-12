@@ -1,3 +1,13 @@
+camunda-db*
 *.db
 .idea
 .DS_Store
+/simulator/mvnw
+/simulator/mvnw.cmd
+
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
+/simulator/simulator.iml
+/simulator/.mvn/

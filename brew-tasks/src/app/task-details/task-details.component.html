@@ -1,0 +1,18 @@
+<h2>Task Details</h2>
+
+<hr/>
+<div *ngIf="recipe">
+  <div>
+    <label><b>Recipe Name: </b></label> {{recipe.recipeName}}
+  </div>
+  <div>
+    <label><b>All Grain?: </b></label> {{recipe.allGrain}}
+  </div>
+  <div>
+    <label><b>Lager?: </b></label> {{recipe.lager}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Task List</button><br>

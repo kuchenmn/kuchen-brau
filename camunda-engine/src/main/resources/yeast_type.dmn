@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/DMN/20151101/dmn.xsd" id="Definitions_0jgmx45" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="3.4.1">
+  <decision id="yeast_type" name="Yeast Type">
+    <decisionTable id="decisionTable_1">
+      <input id="input_1" label="Recipe Name">
+        <inputExpression id="inputExpression_1" typeRef="string">
+          <text>recipeName</text>
+        </inputExpression>
+        <inputValues id="UnaryTests_1f9kufs">
+          <text>"Kuchen Pils","Kuchenm Lager","Kuchen Ale","Kuchen IPA","Kuchen Weisse"</text>
+        </inputValues>
+      </input>
+      <output id="output_1" label="Dry Yeast?" name="dryYeast" typeRef="boolean" />
+      <rule id="DecisionRule_03vmwjv">
+        <inputEntry id="UnaryTests_1gwkhw1">
+          <text>"Kuchen Ale","Kuchen IPA"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_18j7nmi">
+          <text>true</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1h2xqpa">
+        <inputEntry id="UnaryTests_1oybd4i">
+          <text>not("Kuchen Ale","Kuchen IPA")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0amvadx">
+          <text>false</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+</definitions>
